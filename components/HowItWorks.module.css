@@ -1,0 +1,177 @@
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.left {
+  padding: 80px 56px;
+  border-right: 1px solid var(--border);
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 16px;
+  font-family: var(--font-heading);
+}
+
+.title {
+  font-size: clamp(30px, 3.5vw, 48px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin-bottom: 48px;
+  color: var(--black);
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.step:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+.num {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--orange);
+  min-width: 24px;
+  padding-top: 3px;
+}
+
+.step h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.3px;
+  color: var(--black);
+}
+
+.step p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* RIGHT PANEL */
+.right {
+  background: var(--black);
+  padding: 80px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 300px;
+}
+
+.cardHeader {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 20px;
+}
+
+.orderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #222;
+}
+
+.orderRow:last-of-type {
+  border-bottom: none;
+}
+
+.orderLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+  flex-shrink: 0;
+}
+
+.dotDim {
+  background: #333;
+}
+
+.orderName {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.orderSub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 1px;
+}
+
+.orderPrice {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  padding: 8px 14px;
+  border-radius: 100px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    padding: 60px 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .right {
+    padding: 60px 24px;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+}

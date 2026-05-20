@@ -1,0 +1,161 @@
+.section {
+  padding: 96px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  margin-bottom: 64px;
+}
+
+.flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 24px;
+}
+
+.lineBg {
+  position: absolute;
+  top: 62px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  z-index: 0;
+  overflow: hidden;
+}
+.lineBg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to right,
+    var(--border) 0,
+    var(--border) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+.lineBg::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to right, var(--orange), var(--orange-border), transparent);
+  animation: retailo-linePulse 4s ease-in-out infinite;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.node {
+  width: 80px;
+  height: 80px;
+  background: var(--bg);
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.card:nth-child(2) .node {
+  background: var(--orange);
+  box-shadow: 0 0 0 6px rgba(232, 100, 10, 0.1),
+              0 0 0 14px rgba(232, 100, 10, 0.05);
+}
+.card:nth-child(3) .node {
+  background: var(--orange-light);
+  box-shadow: 0 0 0 6px rgba(232, 100, 10, 0.06);
+}
+.card:nth-child(4) .node {
+  background: var(--bg);
+}
+
+.node svg {
+  width: 32px;
+  height: 32px;
+}
+.card:nth-child(2) .node svg { stroke: #fff; }
+.card:nth-child(3) .node svg,
+.card:nth-child(4) .node svg { stroke: var(--orange); }
+
+.card:hover .node {
+  transform: scale(1.05);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--orange);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.labelDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.6px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 260px;
+  margin-bottom: 16px;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 20px; }
+  .flow { grid-template-columns: 1fr; gap: 48px; }
+  .lineBg { display: none; }
+}
+
+@keyframes retailo-linePulse {
+  0%   { transform: translateX(0%); }
+  50%  { transform: translateX(230%); }
+  100% { transform: translateX(0%); }
+}

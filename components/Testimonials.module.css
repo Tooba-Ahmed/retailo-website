@@ -1,0 +1,240 @@
+.wrap {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 96px 40px;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 56px;
+}
+
+/* ── Carousel ── */
+.carousel {
+  display: grid;
+  grid-template-columns: 240px 1fr 200px;
+  gap: 16px;
+  align-items: stretch;
+  min-height: 340px;
+}
+
+/* ── Left: person card ── */
+.personCard {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: flex-end;
+}
+
+.avatar {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
+}
+
+.avatarInitials {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--orange-light);
+  border: 2px solid var(--orange-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--orange);
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 1;
+  /* Make it a block element taking the avatar space */
+  display: block;
+  line-height: 92px;
+  text-align: center;
+  box-shadow: 0 0 0 6px rgba(232, 100, 10, 0.08),
+              0 0 0 14px rgba(232, 100, 10, 0.04);
+}
+
+.avatarRing {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1.5px dashed var(--orange-border);
+  opacity: 0.6;
+  animation: retailo-rotate-cw 20s linear infinite;
+}
+
+.personInfo {
+  text-align: center;
+}
+
+.personName {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 4px;
+  letter-spacing: -0.2px;
+}
+
+.personRole {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.personTag {
+  display: inline-block;
+  background: var(--orange-light);
+  border: 1px solid var(--orange-border);
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.2px;
+}
+
+/* ── Centre: main quote card ── */
+.quoteCard {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.quoteIcon {
+  font-size: 56px;
+  color: var(--orange);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 16px;
+  font-family: Georgia, serif;
+  opacity: 0.7;
+}
+
+.quote {
+  font-size: 20px;
+  color: var(--text);
+  line-height: 1.65;
+  font-weight: 400;
+  font-style: normal;
+  flex: 1;
+  animation: retailo-fade-in 0.4s ease;
+}
+
+/* ── Right: nav cards ── */
+.navCards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.navCard {
+  flex: 1;
+  background: var(--orange-light);
+  border: 1px solid var(--orange-border);
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+  color: var(--orange);
+}
+.navCard:hover {
+  background: rgba(232, 100, 10, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(232, 100, 10, 0.12);
+}
+
+.navLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.navPreview {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.5px;
+}
+
+.navArrow {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--orange);
+  line-height: 1;
+}
+
+/* ── Dot indicators ── */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border2);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.dotActive {
+  background: var(--orange);
+  transform: scale(1.3);
+}
+
+/* Animations */
+@keyframes retailo-rotate-cw {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes retailo-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .wrap { padding: 64px 20px; }
+  .carousel {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .personCard { flex-direction: row; justify-content: flex-start; }
+  .navCards { flex-direction: row; }
+  .quote { font-size: 16px; }
+}

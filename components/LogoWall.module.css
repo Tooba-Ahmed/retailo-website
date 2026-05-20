@@ -1,0 +1,40 @@
+.wall {
+  padding: 48px 40px 24px;
+  background: var(--bg);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.label {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 28px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.cell {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #c5c0b5;
+  letter-spacing: -0.3px;
+  transition: color 0.2s;
+}
+.cell:hover { color: var(--text); }
+
+@media (max-width: 768px) {
+  .wall { padding: 32px 20px; }
+  .row { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+}

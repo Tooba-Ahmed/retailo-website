@@ -1,0 +1,38 @@
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px 56px;
+}
+
+.h1 {
+  font-size: clamp(44px, 6vw, 72px);
+  font-weight: 800;
+  letter-spacing: -2.8px;
+  line-height: 1.0;
+  color: var(--black);
+  margin-bottom: 18px;
+}
+.h1 em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.sub {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 620px;
+  line-height: 1.65;
+}
+.sub a {
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px solid var(--orange-border);
+  transition: border-color 0.15s;
+}
+.sub a:hover {
+  border-color: var(--orange);
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 56px 20px 40px; }
+}

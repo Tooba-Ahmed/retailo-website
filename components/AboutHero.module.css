@@ -1,0 +1,35 @@
+.hero {
+  padding: 96px 40px 64px;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero :global(.s-eyebrow) {
+  margin-bottom: 20px;
+}
+
+.h1 {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -2.8px;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+.h1 em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.sub {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 64px 20px 48px; }
+}

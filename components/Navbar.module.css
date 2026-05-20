@@ -1,0 +1,68 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 60px;
+  background: rgba(251, 250, 247, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.logo span {
+  color: var(--orange);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+.links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.15s;
+  cursor: pointer;
+}
+.links a:hover {
+  color: var(--text);
+}
+
+.cta {
+  background: var(--black);
+  color: var(--bg) !important;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  transition: background 0.15s;
+}
+.cta:hover {
+  background: #333;
+  color: var(--bg) !important;
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 0 20px; }
+  .links { gap: 16px; }
+  .links li:nth-child(1),
+  .links li:nth-child(2),
+  .links li:nth-child(4) { display: none; }
+}
