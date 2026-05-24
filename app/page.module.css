@@ -1,6 +1,8 @@
+/* Full-bleed wrapper — dot grid covers the entire viewport width */
 .dotSection {
   position: relative;
-  /* Dot grid spans the full height of hero + connected steps */
+  width: 100%;
+  /* CSS dot grid as a true full-bleed background */
   background-image: radial-gradient(
     circle,
     rgba(232, 100, 10, 0.20) 1.2px,
@@ -9,14 +11,15 @@
   background-size: 28px 28px;
 }
 
-/* Fade dots out at the bottom — now sits after Solutions */
+/* Single fade — fires only at the very bottom of Solutions,
+   right before Results/CTABand (the dark section) */
 .dotSection::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 240px;
+  height: 280px;
   background: linear-gradient(to bottom, transparent, var(--bg));
   pointer-events: none;
   z-index: 1;
