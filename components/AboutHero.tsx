@@ -8,11 +8,12 @@ export default function AboutHero() {
         About Retailo
       </div>
       <h1 className={styles.h1}>
-        Supercharging<br /><em>retail</em> across MENAP.
+        Built in the field.<br /><em>Built for it too.</em>
       </h1>
       <p className={styles.sub}>
-        Through our high-powered platforms and data-driven teams, we're transforming
-        how retail operates across the Middle East, North Africa, and Pakistan.
+        We didn't start as a software company. We ran one of MENAP's largest
+        retail distribution networks for seven years — and built the technology
+        because nothing on the market was good enough.
       </p>
     </section>
   )

@@ -98,44 +98,42 @@ export default function Hero() {
       <div className={styles.glow} />
 
       <div className={styles.content}>
-        {/* Eyebrow */}
         <div className={styles.eyebrow}>
           <span className={styles.eyebrowDot} />
-          Retail Digital Solutions · MENAP
+          Supply Chain · AI · Technology · MENAP
         </div>
 
-        {/* Headline */}
         <h1 className={styles.h1}>
-          Retail, <span className={styles.orange}>digitized.</span>
+          Built for <span className={styles.orange}>MENAP retail.</span>
         </h1>
 
-        {/* Sub */}
         <p className={styles.sub}>
-          We build the software, AI, and technology stack behind the most
-          ambitious retail and FMCG operations across MENAP.
+          We give brands and distributors the software, AI, and engineering
+          to run faster, leaner supply chains — from order to delivery.
         </p>
 
-        {/* CTAs */}
         <div className={styles.actions}>
           <a href="#contact" className="btn-orange">Book a demo →</a>
-          <a href="#solutions" className="btn-outline">Explore solutions</a>
+          <a href="#solutions" className="btn-outline">See what we do</a>
         </div>
 
-        {/* Metrics — inline, part of hero */}
+        {/* Metrics — replace values with real data when available */}
         <div className={styles.metrics}>
           <div className={styles.metric}>
-            <span className={styles.metricNum}>100<span className={styles.metricSuffix}>+</span></span>
-            <span className={styles.metricLabel}>Communities served</span>
+            <span className={styles.metricNum}>7<span className={styles.metricSuffix}>yr</span></span>
+            <span className={styles.metricLabel}>In MENAP retail</span>
           </div>
           <div className={styles.metricDivider} />
           <div className={styles.metric}>
-            <span className={styles.metricNum}>500K<span className={styles.metricSuffix}>+</span></span>
-            <span className={styles.metricLabel}>Retailers enabled</span>
+            {/* PLACEHOLDER — replace with real figure */}
+            <span className={styles.metricNum}>[X]<span className={styles.metricSuffix}>+</span></span>
+            <span className={styles.metricLabel}>Brands & distributors</span>
           </div>
           <div className={styles.metricDivider} />
           <div className={styles.metric}>
-            <span className={styles.metricNum}>3M<span className={styles.metricSuffix}>+</span></span>
-            <span className={styles.metricLabel}>Orders received</span>
+            {/* PLACEHOLDER — replace with real figure */}
+            <span className={styles.metricNum}>[X]<span className={styles.metricSuffix}>+</span></span>
+            <span className={styles.metricLabel}>Countries served</span>
           </div>
         </div>
       </div>

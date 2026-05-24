@@ -6,15 +6,15 @@ export default function ConnectedSteps() {
       <div className={styles.header}>
         <div className="s-eyebrow">
           <span className="s-eyebrow-dot" />
-          How Retailo works
+          How it works
         </div>
         <h2 className="s-title">
-          Every step,<br /><em>connected.</em>
+          One platform,<br /><em>end to end.</em>
         </h2>
         <p className="s-desc">
-          Most retail operations run on disconnected tools — orders in WhatsApp,
-          inventory in Excel, deliveries on paper. Retailo unifies them into one
-          operating system.
+          Most brands and distributors run on fragmented tools — orders on
+          WhatsApp, inventory in spreadsheets, deliveries on paper. Retailo
+          brings every layer into one connected operating system.
         </p>
       </div>
 
@@ -24,57 +24,60 @@ export default function ConnectedSteps() {
         <div className={styles.card}>
           <div className={styles.node}>
             <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M9 17H7A5 5 0 017 7h2m6 0h2a5 5 0 010 10h-2M8 12h8" />
+              <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0" />
             </svg>
           </div>
           <div className={styles.label}>
             <span className={styles.labelDot} />STEP 01
           </div>
-          <h3>Connect</h3>
-          <p>Plug in existing distributors, retailers, and inventory data. No rip-and-replace.</p>
+          <h3>Order</h3>
+          <p>Retailers order directly through a branded digital storefront. No reps, no calls, no friction.</p>
           <div className={styles.tags}>
-            <span className={styles.tag}>API</span>
-            <span className={styles.tag}>ERP</span>
-            <span className={styles.tag}>Migration</span>
+            <span className={styles.tag}>Direct ordering</span>
+            <span className={styles.tag}>Catalogue</span>
+            <span className={styles.tag}>Pricing rules</span>
           </div>
         </div>
 
         <div className={styles.card}>
           <div className={styles.node}>
             <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="4" y="4" width="16" height="16" rx="2" />
-              <path d="M9 9h6M9 13h6M9 17h4" />
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
             </svg>
           </div>
           <div className={styles.label}>
             <span className={styles.labelDot} />STEP 02
           </div>
-          <h3>Digitize</h3>
-          <p>Orders, sales, credit — everything moves from paper to platform with full visibility.</p>
+          <h3>Sell & collect</h3>
+          <p>Field sales teams are tracked, managed, and equipped — with credit and collections built in.</p>
           <div className={styles.tags}>
-            <span className={styles.tag}>Ordering</span>
             <span className={styles.tag}>Field sales</span>
             <span className={styles.tag}>Credit</span>
+            <span className={styles.tag}>Collections</span>
           </div>
         </div>
 
         <div className={styles.card}>
           <div className={styles.node}>
             <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 17l6-6 4 4 8-8M14 7h6v6" />
+              <path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
             </svg>
           </div>
           <div className={styles.label}>
             <span className={styles.labelDot} />STEP 03
           </div>
-          <h3>Optimize</h3>
-          <p>7 years of MENAP retail data trains forecasting, routing, and replenishment models.</p>
+          <h3>Deliver</h3>
+          <p>Route-optimized delivery with real-time tracking and proof of delivery at every stop.</p>
           <div className={styles.tags}>
-            <span className={styles.tag}>Forecasting</span>
-            <span className={styles.tag}>Routing</span>
-            <span className={styles.tag}>Restock</span>
+            <span className={styles.tag}>Route planning</span>
+            <span className={styles.tag}>Tracking</span>
+            <span className={styles.tag}>POD</span>
           </div>
         </div>
+
       </div>
     </section>
   )

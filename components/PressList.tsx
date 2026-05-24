@@ -1,28 +1,40 @@
 import styles from './PressList.module.css'
 
+// PLACEHOLDER SECTION
+// All press items below are placeholders.
+// Replace with real, verifiable press coverage before publishing.
+// Each item needs: real date, real publication name, real headline, real URL.
+// If no press exists yet, hide this section or show an empty state.
+
 const pressData = [
   {
     year: '2025',
     items: [
-      { date: 'May 2025', publication: 'Arabian Business', headline: 'Retailo launches enterprise SaaS to digitize MENAP supply chains' },
-      { date: 'Apr 2025', publication: 'TechCrunch', headline: 'Retailo pivots to enterprise as MENAP retail digitization accelerates' },
-      { date: 'Mar 2025', publication: 'Forbes Middle East', headline: '500K+ retailers now enabled on Retailo — what comes next' },
+      {
+        date: '[Month 2025]',
+        publication: '[Publication name]',
+        headline: '[Replace with real headline from a real article]',
+      },
+      {
+        date: '[Month 2025]',
+        publication: '[Publication name]',
+        headline: '[Replace with real headline from a real article]',
+      },
     ],
   },
   {
     year: '2024',
     items: [
-      { date: 'Nov 2024', publication: 'Wamda', headline: 'How Retailo is rewiring the MENAP retail supply chain' },
-      { date: 'Sep 2024', publication: 'MAGNiTT', headline: 'Retailo named in Top 100 MENAP Startups to Watch' },
-      { date: 'Jul 2024', publication: 'Bloomberg', headline: 'Retailo expands its B2B marketplace across Saudi Arabia and UAE' },
-      { date: 'Feb 2024', publication: 'Reuters', headline: 'Retailo announces Series B funding to scale supply chain platform' },
-    ],
-  },
-  {
-    year: '2023',
-    items: [
-      { date: 'Oct 2023', publication: 'Khaleej Times', headline: "Inside Retailo's mission to digitize traditional trade in MENAP" },
-      { date: 'May 2023', publication: 'Crunchbase News', headline: 'Retailo raises Series A to bring tech to MENAP retailers' },
+      {
+        date: '[Month 2024]',
+        publication: '[Publication name]',
+        headline: '[Replace with real headline from a real article]',
+      },
+      {
+        date: '[Month 2024]',
+        publication: '[Publication name]',
+        headline: '[Replace with real headline from a real article]',
+      },
     ],
   },
 ]

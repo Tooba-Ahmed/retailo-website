@@ -15,8 +15,8 @@ export default function Founders() {
           Our cofounders
         </div>
         <p className="s-desc" style={{ margin: '0 auto' }}>
-          Always looking for a problem to solve, the three founded Retailo to elevate
-          the traditional retail system in MENAP.
+          Three operators who spent years running retail at scale across MENAP
+          before building the technology to do it better.
         </p>
       </div>
 

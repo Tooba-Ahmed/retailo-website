@@ -11,13 +11,14 @@ export default function Spotlight() {
             In the spotlight
           </div>
           <h2 className="s-title">
-            Here's what's<br /><em>happening.</em>
+            Here&apos;s what&apos;s<br /><em>happening.</em>
           </h2>
         </div>
         <Link href="/news" className="btn-outline">View all news →</Link>
       </div>
 
       <div className={styles.grid}>
+        {/* PLACEHOLDER — replace with real press/news items before launch */}
         <article className={styles.card}>
           <div className={`${styles.img} ${styles.g3}`}>
             <div className={styles.ring}>
@@ -29,11 +30,10 @@ export default function Spotlight() {
             <span className={styles.tag}>Product</span>
           </div>
           <div className={styles.content}>
-            <div className={styles.date}>May 2025 · Product Launch</div>
-            <h4>Introducing Retailo's Supply Chain SaaS Platform</h4>
+            <div className={styles.date}>[Month Year] · Product</div>
+            <h4>[Headline — replace with real launch or announcement]</h4>
             <p className={styles.excerpt}>
-              A unified platform for ordering, sales, delivery, planning, and credit
-              — purpose-built for FMCG brands and distributors.
+              [Replace with real news item. Do not publish placeholder content.]
             </p>
             <span className={styles.link}>Read more →</span>
           </div>
@@ -49,11 +49,10 @@ export default function Spotlight() {
             <span className={styles.tag}>Partnership</span>
           </div>
           <div className={styles.content}>
-            <div className={styles.date}>April 2025 · Press</div>
-            <h4>Retailo partners with leading FMCG brands across MENAP</h4>
+            <div className={styles.date}>[Month Year] · Press</div>
+            <h4>[Headline — replace with real partnership or press coverage]</h4>
             <p className={styles.excerpt}>
-              Strategic partnerships expand our footprint to support digital
-              transformation across the region's largest retail networks.
+              [Replace with real news item. Do not publish placeholder content.]
             </p>
             <span className={styles.link}>Read more →</span>
           </div>
@@ -69,11 +68,10 @@ export default function Spotlight() {
             <span className={styles.tag}>Milestone</span>
           </div>
           <div className={styles.content}>
-            <div className={styles.date}>March 2025 · Company</div>
-            <h4>500K+ retailers now enabled on Retailo</h4>
+            <div className={styles.date}>[Month Year] · Company</div>
+            <h4>[Headline — replace with real company milestone]</h4>
             <p className={styles.excerpt}>
-              A milestone moment for the team — and a reminder of why we started:
-              empowering MENAP's small and medium retailers.
+              [Replace with real news item. Do not publish placeholder content.]
             </p>
             <span className={styles.link}>Read more →</span>
           </div>

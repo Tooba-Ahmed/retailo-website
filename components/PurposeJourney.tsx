@@ -2,18 +2,42 @@ import styles from './PurposeJourney.module.css'
 
 export default function PurposeJourney() {
   const journey = [
-    { year: '2020', title: 'Founded', text: 'Three co-founders set out to digitize traditional trade across MENAP.' },
-    { year: '2021', title: 'Series A', text: 'Backed by leading global VCs to scale across Pakistan, KSA, and UAE.' },
-    { year: '2023', title: '500K+ retailers', text: 'Crossed half a million SMEs enabled on the platform.' },
-    { year: '2025', title: 'The pivot', text: 'Launched Retailo Technologies — taking 7 years of operational experience and turning it into enterprise SaaS, AI consulting, and technology services.' },
+    {
+      year: '2018',
+      title: 'Founded',
+      text: 'Three co-founders started Retailo to fix how goods move through MENAP — starting in Pakistan, building from the ground up.',
+    },
+    {
+      year: '2021',
+      title: 'Regional expansion',
+      text: 'Backed by leading global investors to scale operations into Saudi Arabia and the UAE.',
+    },
+    {
+      year: '2023',
+      title: 'Network at scale',
+      // PLACEHOLDER: replace milestone description with verified figure/event
+      text: 'Built one of MENAP\'s largest retail distribution networks — [X] orders processed, [X] communities served.',
+    },
+    {
+      year: '2025',
+      title: 'Retailo Technologies',
+      text: 'Launched the enterprise chapter: taking 7 years of operational experience and turning it into SaaS, AI consulting, and technology services for brands and distributors.',
+    },
   ]
 
   return (
     <section className={styles.section}>
       <div className={styles.text}>
         <h2 className={styles.h2}>Our <em>purpose.</em></h2>
-        <p>To improve the lives of the unserved segments of society through technology.</p>
-        <p>We've spent years in the trenches of MENAP retail — building marketplaces, running distribution networks, working alongside the brands and retailers who keep communities running. Now we're turning that operational reality into technology that scales.</p>
+        <p>
+          To give brands and distributors across MENAP the technology to run
+          faster, leaner, and more connected supply chains.
+        </p>
+        <p>
+          We spent years operating inside the problem — running distribution
+          networks, managing field sales, processing millions of orders. That
+          experience is the foundation everything we build is built on.
+        </p>
       </div>
 
       <div className={styles.card}>

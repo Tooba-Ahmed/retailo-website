@@ -8,10 +8,10 @@ interface Props {
 }
 
 export default function CTABand({
-  headline = <>The most powerful platform<br />for <span>retail in MENAP.</span></>,
-  subline = 'Book a 30-minute demo — no commitment, no sales pressure, just the platform.',
+  headline = <>The infrastructure for<br /><span>MENAP retail.</span></>,
+  subline = 'Talk to us about your supply chain, your AI roadmap, or your next product. We\'ve built it before.',
   primaryLabel = 'Book a demo →',
-  secondaryLabel = 'Contact sales',
+  secondaryLabel = 'Talk to sales',
 }: Props) {
   return (
     <section className={styles.wrap} id="contact">

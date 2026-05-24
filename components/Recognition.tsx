@@ -1,25 +1,30 @@
 import styles from './Recognition.module.css'
 
-export default function Recognition() {
-  const items = [
-    {
-      badge: 'G2\nLEADER',
-      badgeStyle: 'dark',
-      tag: 'G2 Leader · Retail SaaS',
-      title: 'Recognized in MENAP retail tech',
-      desc: 'Top-rated by retailers and FMCG operators across the region based on satisfaction and outcomes.',
-      link: 'See on G2 →',
-    },
-    {
-      badge: 'SAUDI\nFAST 50',
-      badgeStyle: 'orange',
-      tag: 'Award · 2024',
-      title: 'Saudi Fast 50',
-      desc: "Named one of Saudi Arabia's fastest growing technology companies by Deloitte.",
-      link: 'Read announcement →',
-    },
-  ]
+// PLACEHOLDER SECTION
+// Both recognition items below are placeholders.
+// Replace with real, verifiable awards before publishing.
+// If no awards exist yet, remove this section from news/page.tsx entirely.
 
+const items = [
+  {
+    badge: '[ ]',
+    badgeStyle: 'dark',
+    tag: '[Award name · Year]',
+    title: '[Replace with real award or recognition]',
+    desc: '[Replace with real credential. Do not publish invented G2/Gartner/Deloitte recognition.]',
+    link: '[Link to source] →',
+  },
+  {
+    badge: '[ ]',
+    badgeStyle: 'orange',
+    tag: '[Award name · Year]',
+    title: '[Replace with real award or recognition]',
+    desc: '[Replace with real credential. Do not publish invented recognition.]',
+    link: '[Link to source] →',
+  },
+]
+
+export default function Recognition() {
   return (
     <section className={styles.wrap}>
       <div className={styles.inner}>

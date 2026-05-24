@@ -1,11 +1,33 @@
 import styles from './Results.module.css'
 
 export default function Results() {
+  // PLACEHOLDERS — replace each [X] with real verified data before launch.
+  // These slots are intentionally left blank to avoid publishing false figures.
   const results = [
-    { num: '>94', suffix: '%', label: 'On-time delivery rate across the network' },
-    { num: '30', suffix: '%', label: 'Reduction in order processing time' },
-    { num: '20', suffix: '%', label: 'Reduction in supply chain costs' },
-    { num: '2', suffix: '×', label: 'Increase in retailer reorder frequency' },
+    {
+      num: '7',
+      suffix: 'yr',
+      label: 'Operating in MENAP retail — longer than any competitor',
+      // REAL: founded 2018, 7 years of field operations
+    },
+    {
+      num: '[X]',
+      suffix: '+',
+      label: 'Brands and distributors on the platform',
+      // PLACEHOLDER: replace with real onboarding count
+    },
+    {
+      num: '[X]',
+      suffix: '%',
+      label: 'Reduction in manual order processing time',
+      // PLACEHOLDER: replace with measured client outcome
+    },
+    {
+      num: '[X]',
+      suffix: '+',
+      label: 'Orders processed through the platform',
+      // PLACEHOLDER: replace with real transaction volume
+    },
   ]
 
   return (
@@ -17,11 +39,11 @@ export default function Results() {
             Results, delivered
           </div>
           <h2 className="s-title">
-            Numbers that<br /><em>move the business.</em>
+            Real operations,<br /><em>measurable outcomes.</em>
           </h2>
           <p className="s-desc">
-            Consistent performance improvements by transforming retail operations
-            as a single connected system — not isolated tools.
+            Seven years of running one of MENAP&apos;s largest retail networks
+            means every feature we build has been stress-tested in the field.
           </p>
         </div>
 
