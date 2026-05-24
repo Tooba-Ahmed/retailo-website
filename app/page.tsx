@@ -4,7 +4,6 @@ import ConnectedSteps from '../components/ConnectedSteps'
 import Solutions from '../components/Solutions'
 import Results from '../components/Results'
 import Spotlight from '../components/Spotlight'
-import Testimonials from '../components/Testimonials'
 import CTABand from '../components/CTABand'
 import Footer from '../components/Footer'
 import styles from './page.module.css'
@@ -22,7 +21,6 @@ export default function Home() {
         </div>
         <Results />
         <Spotlight />
-        <Testimonials />
         <CTABand />
       </main>
       <Footer />

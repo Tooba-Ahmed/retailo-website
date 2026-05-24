@@ -2,7 +2,6 @@ import Navbar from '../../components/Navbar'
 import AboutHero from '../../components/AboutHero'
 import PurposeJourney from '../../components/PurposeJourney'
 import Values from '../../components/Values'
-import Founders from '../../components/Founders'
 import CTABand from '../../components/CTABand'
 import Footer from '../../components/Footer'
 
