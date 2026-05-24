@@ -14,12 +14,12 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        {/* Shared dot-grid background spans hero + connected steps seamlessly */}
+        {/* Shared dot-grid background spans hero + connected steps + solutions */}
         <div className={styles.dotSection}>
           <Hero />
           <ConnectedSteps />
+          <Solutions />
         </div>
-        <Solutions />
         <Results />
         <Spotlight />
         <Testimonials />
