@@ -30,8 +30,8 @@ export default function Recognition() {
       <div className={styles.inner}>
         <div className={styles.label}>Recognition</div>
         <div className={styles.grid}>
-          {items.map(item => (
-            <div key={item.title} className={styles.card}>
+          {items.map((item, i) => (
+            <div key={i} className={styles.card}>
               <div className={`${styles.badge} ${styles[item.badgeStyle]}`}>
                 {item.badge.split('\n').map((line, i) => (
                   <span key={i}>{line}</span>

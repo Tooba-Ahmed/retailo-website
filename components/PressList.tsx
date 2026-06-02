@@ -52,8 +52,8 @@ export default function PressList() {
               <div className={styles.yearCount}>{group.items.length} mentions</div>
             </div>
 
-            {group.items.map(item => (
-              <a key={item.headline} href="#" className={styles.item}>
+            {group.items.map((item, i) => (
+              <a key={i} href="#" className={styles.item}>
                 <div className={styles.date}>{item.date}</div>
                 <div className={styles.publication}>{item.publication}</div>
                 <div className={styles.headline}>{item.headline}</div>

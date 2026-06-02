@@ -5,27 +5,11 @@ import styles from './Solutions.module.css';
 const solutions = [
   {
     number: '01',
-    category: 'SUPPLY CHAIN SAAS',
-    title: 'End-to-end distribution platform',
-    description:
-      'Direct ordering, field sales, delivery, planning, and credit — all in one system built for how MENAP brands and distributors actually operate.',
-    variant: 'light',
-    visual: (
-      <div className={styles.visualStack}>
-        <div className={styles.stackRow}><span>Orders</span><span className={styles.stackDot} /></div>
-        <div className={styles.stackRow}><span>Delivery</span><span className={styles.stackDot} /></div>
-        <div className={styles.stackRow}><span>Credit</span><span className={styles.stackDot} /></div>
-        <div className={styles.stackRow}><span>Planning</span><span className={styles.stackDot} /></div>
-      </div>
-    ),
-  },
-  {
-    number: '02',
     category: 'AI CONSULTING',
     title: 'Enterprise AI transformation',
     description:
-      'We embed into your team and take you from AI strategy to live deployment — with domain expertise in FMCG and retail that generalist consultants don\'t have.',
-    variant: 'warm',
+      'From AI strategy to working systems in production. We embed into your team and deliver across retail, FMCG, and distribution.',
+    variant: 'light',
     visual: (
       <div className={styles.visualNodes}>
         <div className={styles.nodeCenter}>
@@ -36,8 +20,8 @@ const solutions = [
         </div>
         <div className={`${styles.nodeSat} ${styles.nodeTL}`}>Strategy</div>
         <div className={`${styles.nodeSat} ${styles.nodeTR}`}>Data</div>
-        <div className={`${styles.nodeSat} ${styles.nodeBL}`}>Deploy</div>
-        <div className={`${styles.nodeSat} ${styles.nodeBR}`}>Scale</div>
+        <div className={`${styles.nodeSat} ${styles.nodeBL}`}>Automate</div>
+        <div className={`${styles.nodeSat} ${styles.nodeBR}`}>Deploy</div>
         <svg className={styles.nodeLines} viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
           <line x1="80" y1="60" x2="30" y2="22" stroke="currentColor" strokeWidth="1" strokeDasharray="4 3" opacity="0.4" />
           <line x1="80" y1="60" x2="130" y2="22" stroke="currentColor" strokeWidth="1" strokeDasharray="4 3" opacity="0.4" />
@@ -48,18 +32,34 @@ const solutions = [
     ),
   },
   {
-    number: '03',
+    number: '02',
     category: 'TECH SERVICES',
     title: 'Build your product with us',
     description:
-      'Have an idea that needs to become software? We design, build, and ship it — with a team that has shipped production systems for one of MENAP\'s largest retail networks.',
-    variant: 'orange',
+      'You bring the problem. We design, build, and ship the software. Our team has run production systems at scale and knows what it takes to get there.',
+    variant: 'warm',
     visual: (
       <div className={styles.visualCode}>
         <div className={styles.codeLine}><span className={styles.codeKw}>design</span><span className={styles.codeParen}>(</span><span className={styles.codeStr}>"product"</span><span className={styles.codeParen}>)</span></div>
         <div className={styles.codeLine}><span className={styles.codeKw}>build</span><span className={styles.codeParen}>(</span><span className={styles.codeStr}>"fast"</span><span className={styles.codeParen}>)</span></div>
         <div className={styles.codeLine}><span className={styles.codeKw}>ship</span><span className={styles.codeParen}>(</span><span className={styles.codeStr}>"production"</span><span className={styles.codeParen}>)</span></div>
         <div className={`${styles.codeLine} ${styles.codeCursor}`}><span className={styles.codeKw}>_</span></div>
+      </div>
+    ),
+  },
+  {
+    number: '03',
+    category: 'SUPPLY CHAIN SAAS',
+    title: 'Our own distribution platform',
+    description:
+      'Direct ordering, field sales, delivery, credit, and demand planning in one system. Built by the team that operated it. Proof of what we build for clients.',
+    variant: 'orange',
+    visual: (
+      <div className={styles.visualStack}>
+        <div className={styles.stackRow}><span>Direct ordering</span><span className={styles.stackDot} /></div>
+        <div className={styles.stackRow}><span>Field sales</span><span className={styles.stackDot} /></div>
+        <div className={styles.stackRow}><span>Delivery</span><span className={styles.stackDot} /></div>
+        <div className={styles.stackRow}><span>Credit</span><span className={styles.stackDot} /></div>
       </div>
     ),
   },
@@ -78,8 +78,7 @@ export default function Solutions() {
           <span className={styles.headingAccent}>with you.</span>
         </h2>
         <p className={styles.subheading}>
-          Whether you need a platform, a transformation partner, or a team to
-          build your vision — we bring 7 years of MENAP retail operations to the table.
+          AI consulting, custom engineering, or our own supply chain platform. Real work, shipped at real scale.
         </p>
       </div>
 
