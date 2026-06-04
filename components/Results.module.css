@@ -1,15 +1,16 @@
 .wrap {
-  background: var(--black);
-  color: #fff;
+  background: #f6f3ec;
+  color: var(--black);
   padding: 96px 40px;
   position: relative;
   overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 .wrap::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1.2px);
+  background-image: radial-gradient(circle, rgba(232, 100, 10, 0.06) 1px, transparent 1.2px);
   background-size: 24px 24px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 85%);
   -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 85%);
@@ -26,19 +27,19 @@
 .header {
   margin-bottom: 64px;
 }
-.header :global(.s-title) { color: #fff; }
-.header :global(.s-desc) { color: rgba(255, 255, 255, 0.55); }
+.header :global(.s-title) { color: var(--black); }
+.header :global(.s-desc) { color: var(--muted); }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .cell {
   padding: 48px 28px;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
 .cell:last-child { border-right: none; }
 
@@ -46,7 +47,7 @@
   font-size: 64px;
   font-weight: 800;
   letter-spacing: -3px;
-  color: #fff;
+  color: var(--black);
   line-height: 1;
   margin-bottom: 12px;
 }
@@ -54,7 +55,7 @@
 
 .label {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--muted);
   line-height: 1.55;
 }
 
@@ -62,6 +63,6 @@
   .wrap { padding: 64px 20px; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .cell:nth-child(2) { border-right: none; }
-  .cell:nth-child(1), .cell:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .cell:nth-child(1), .cell:nth-child(2) { border-bottom: 1px solid rgba(0,0,0,0.08); }
   .num { font-size: 48px; }
 }

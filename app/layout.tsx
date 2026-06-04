@@ -2,15 +2,20 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Retailo — Retail, digitized.',
+  title: 'Retailo · Operations, engineered.',
   description:
-    'We build the software, AI, and technology stack behind the most ambitious retail and FMCG operations across MENAP.',
+    'We design, engineer, and ship the AI, software, and platforms that run modern operations. Built by a team that operates at scale.',
   keywords:
-    'retail SaaS, FMCG, MENAP, supply chain, AI consulting, retail technology, Pakistan, Saudi Arabia, UAE',
+    'AI consulting, enterprise AI, custom software engineering, supply chain platform, technology services, digital transformation',
+  icons: {
+    icon: '/retailo-icon.svg',
+    shortcut: '/retailo-icon.svg',
+    apple: '/retailo-icon.svg',
+  },
   openGraph: {
-    title: 'Retailo — Retail, digitized.',
+    title: 'Retailo · Operations, engineered.',
     description:
-      'Technology company transforming retail and FMCG operations across MENAP.',
+      'AI, engineering, and platforms that run modern operations. Built by a team that operates at scale.',
     type: 'website',
     url: 'https://retailo.co',
   },

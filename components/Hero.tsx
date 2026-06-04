@@ -1,12 +1,19 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
+import { SplitText } from 'gsap/SplitText'
+import { useGSAP } from '@gsap/react'
 import styles from './Hero.module.css'
+
+gsap.registerPlugin(SplitText, useGSAP)
 
 export default function Hero() {
   const canvasRef  = useRef<HTMLCanvasElement>(null)
   const sectionRef = useRef<HTMLElement>(null)
+  const phraseRef  = useRef<HTMLSpanElement>(null)
 
+  // ── Dot-grid background ───────────────────────────────────────
   useEffect(() => {
     const canvas = canvasRef.current
     const section = sectionRef.current
@@ -74,25 +81,56 @@ export default function Hero() {
     }
   }, [])
 
+  // ── GSAP SplitText char reveal on "built right." ──────────────
+  useGSAP(() => {
+    if (!phraseRef.current) return
+
+    // Wait for fonts so character widths are measured correctly
+    document.fonts.ready.then(() => {
+      const split = new SplitText(phraseRef.current, { type: 'chars' })
+
+      gsap.set(phraseRef.current, { opacity: 1 })
+
+      gsap.from(split.chars, {
+        opacity: 0,
+        yPercent: 60,
+        scale: 0.85,
+        filter: 'blur(6px)',
+        duration: 0.6,
+        ease: 'back.out(1.7)',
+        stagger: 0.035,
+        delay: 0.5,
+      })
+    })
+  }, { scope: sectionRef })
+
   return (
     <section className={styles.hero} ref={sectionRef}>
       <canvas ref={canvasRef} className={styles.canvas} />
       <div className={styles.glow} />
+      <svg className={styles.ghostLogo} viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0.564453 2.67402L11.4474 10.2441L13.1501 7.68325L2.37377 0.296875L0.564453 2.67402Z" fill="#D62B28"/>
+        <path d="M1.57058 0C0.702946 0 0 0.701888 0 1.56821C0 2.43454 0.702946 3.13642 1.57058 3.13642C2.43821 3.13642 3.14115 2.43454 3.14115 1.56821C3.14115 0.701888 2.43765 0 1.57058 0Z" fill="#F58020"/>
+        <path d="M18.9368 8.07322C18.7677 6.83553 18.2432 5.66407 17.4331 4.71277C16.0404 3.07723 14.0112 2.22802 11.8708 2.38086C10.4788 2.48019 9.14471 3.02371 8.0809 3.9259C6.5678 5.20938 5.72559 7.03529 5.72559 8.99031C5.72559 11.9667 7.71174 14.5552 10.5279 15.3603C10.8048 15.4397 11.0513 15.6014 11.2243 15.8315L12.1549 17.0708C12.2582 17.2088 12.4655 17.2088 12.5694 17.0708L13.5 15.8315C13.6724 15.6025 13.9167 15.4397 14.193 15.3608C17.2977 14.4752 19.3944 11.4237 18.9368 8.07322ZM12.3627 12.63C10.3959 12.63 8.80208 11.038 8.80208 9.07473C8.80208 7.11088 10.3964 5.5195 12.3627 5.5195C14.3295 5.5195 15.9233 7.11143 15.9233 9.07473C15.9233 11.038 14.3295 12.63 12.3627 12.63Z" fill="#F58020"/>
+        <path d="M12.304 7.44727C11.4363 7.44727 10.7334 8.14915 10.7334 9.01548C10.7334 9.88125 11.4363 10.5837 12.304 10.5837C13.1711 10.5837 13.8745 9.8818 13.8745 9.01548C13.8745 8.14915 13.1711 7.44727 12.304 7.44727Z" fill="#F58020"/>
+      </svg>
 
       <div className={styles.content}>
         <div className={styles.eyebrow}>
           <span className={styles.eyebrowDot} />
-          AI · Engineering · Supply Chain
+          AI · Engineering · Platforms
         </div>
 
         <h1 className={styles.h1}>
-          Tech and AI,
-          <br />
-          <span className={styles.orange}>built right.</span>
+          Operations,{' '}
+          <br className={styles.h1Break} />
+          <span ref={phraseRef} className={styles.orange} style={{ opacity: 0, display: 'inline-block' }}>
+            engineered.
+          </span>
         </h1>
 
         <p className={styles.sub}>
-          We help enterprises adopt AI, build technology, and run smarter operations. Backed by five years of shipping real products at scale.
+          Bring us the problem: a process to automate, a product to build, a supply chain to fix. We design, engineer, and ship the technology that solves it, built by a team that operates at scale, not just advises.
         </p>
 
         <div className={styles.actions}>

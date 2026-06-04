@@ -67,7 +67,7 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="solutions">
       <div className={styles.header}>
         <p className={styles.eyebrow}>
           <span className={styles.eyebrowDot} />

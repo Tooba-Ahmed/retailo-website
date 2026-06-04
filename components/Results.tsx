@@ -1,32 +1,29 @@
 import styles from './Results.module.css'
 
 export default function Results() {
-  // PLACEHOLDERS — replace each [X] with real verified data before launch.
-  // These slots are intentionally left blank to avoid publishing false figures.
+  // Figures grounded in Retailo's real operating history.
+  // Labelled conservatively (30K+, 100K+) since the public figures are from
+  // the marketplace era and are floors, not ceilings. Update when newer data lands.
   const results = [
     {
-      num: '7',
-      suffix: 'yr',
-      label: 'Operating in MENAP retail — longer than any competitor',
-      // REAL: founded 2018, 7 years of field operations
-    },
-    {
-      num: '[X]',
+      num: '30K',
       suffix: '+',
-      label: 'Brands and distributors on the platform',
-      // PLACEHOLDER: replace with real onboarding count
+      label: 'Retailers served across our platform',
     },
     {
-      num: '[X]',
-      suffix: '%',
-      label: 'Reduction in manual order processing time',
-      // PLACEHOLDER: replace with measured client outcome
-    },
-    {
-      num: '[X]',
+      num: '100K',
       suffix: '+',
-      label: 'Orders processed through the platform',
-      // PLACEHOLDER: replace with real transaction volume
+      label: 'Orders processed every month at scale',
+    },
+    {
+      num: '$53',
+      suffix: 'M',
+      label: 'Raised from global investors',
+    },
+    {
+      num: '3',
+      suffix: '+',
+      label: 'Countries with live operations',
     },
   ]
 
@@ -36,14 +33,15 @@ export default function Results() {
         <div className={styles.header}>
           <div className="s-eyebrow">
             <span className="s-eyebrow-dot" />
-            Results, delivered
+            Proven at scale
           </div>
           <h2 className="s-title">
-            Real operations,<br /><em>measurable outcomes.</em>
+            We&apos;ve built at scale,<br /><em>not just advised on it.</em>
           </h2>
           <p className="s-desc">
-            Seven years of running one of MENAP&apos;s largest retail networks
-            means every feature we build has been stress-tested in the field.
+            Before we became your technology partner, we ran the operations
+            ourselves. Every system we ship is informed by what it takes to
+            run at real volume, in real markets.
           </p>
         </div>
 

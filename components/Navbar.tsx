@@ -18,11 +18,8 @@ export default function Navbar() {
         retailo<span>.</span>
       </Link>
       <ul className={styles.links}>
-        <li><Link href="/#solutions">Solutions</Link></li>
-        <li><Link href="/#platform">Platform</Link></li>
         <li><Link href="/about">About</Link></li>
         <li><Link href="/news">News</Link></li>
-        <li><Link href="/#contact">Contact</Link></li>
         <li><Link href="/#contact" className={styles.cta}>Book a demo</Link></li>
       </ul>
     </nav>

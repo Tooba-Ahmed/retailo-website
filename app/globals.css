@@ -26,6 +26,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Offset anchor jumps so the sticky 60px navbar doesn't cover section tops */
+  scroll-padding-top: 72px;
 }
 
 body {

@@ -40,6 +40,21 @@
   overflow: visible;
 }
 
+/* Faint ghost of the logo sitting inside the glow */
+.ghostLogo {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 420px;
+  filter: blur(8px);
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: 0;
+  animation: retailo-ghost-float 9s ease-in-out infinite;
+}
+
 .content {
   position: relative;
   z-index: 2;
@@ -71,8 +86,12 @@
   animation: retailo-pulse 2s infinite;
 }
 
+.h1Break {
+  display: none;
+}
+
 .h1 {
-  font-size: clamp(40px, 5vw, 68px);
+  font-size: clamp(40px, 5vw, 64px);
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -2px;
@@ -80,6 +99,12 @@
   margin-bottom: 20px;
   opacity: 0;
   animation: retailo-up 0.6s ease forwards 0.2s;
+  /* Allow the headline to use more width than the paragraph so it fits on one line */
+  width: max-content;
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
 }
 
 .orange { color: var(--orange); }
@@ -169,10 +194,22 @@
   50%       { opacity: 0.6; }
 }
 
+@keyframes retailo-ghost-float {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.16; }
+  50%       { transform: translate(-50%, -52%) scale(1.04); opacity: 0.22; }
+}
+
 @media (max-width: 768px) {
   .hero { padding: 64px 20px 56px; min-height: auto; }
-  .h1 { font-size: clamp(36px, 8vw, 52px); letter-spacing: -1.5px; }
+  .h1 {
+    font-size: clamp(36px, 8vw, 52px);
+    letter-spacing: -1.5px;
+    white-space: normal;
+    width: auto;
+  }
+  .h1Break { display: inline; }
   .glow { width: 480px; height: 480px; }
+  .ghostLogo { width: 240px; height: 240px; }
   .metric { padding: 0 24px; }
   .metricNum { font-size: 22px; }
 }
